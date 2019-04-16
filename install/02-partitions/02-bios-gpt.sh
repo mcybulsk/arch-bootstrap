@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source utils/source-commons.sh
+source utils/source-common.sh
 
 echo "Please choose the device to partition (all data will be lost)"
 lsblk
