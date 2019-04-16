@@ -24,7 +24,7 @@ parted -s ${device} set 1 bios_grub on
 echo "Creating a boot partition: ${device}2"
 parted -s ${device} mkpart primary ext4 3MiB 1GiB
 parted -s ${device} name 2 boot
-parted -s ${device} set 2 boot on
+parted -s ${device} set 2 legacy_boot on
 # Should probably be 'mkfs.fat -F32 ${device}2' on EFI
 mkfs.ext4 ${device}2
 echo "Creating an LVM container for LUKS: ${device}3"
@@ -52,4 +52,6 @@ mount ${device}2 /mnt/boot
 echo "Filesystem mounted"
 find /mnt
 
+echo "Configuring mkinitcpio"
+sed -i 's/^HOOKS=.*/HOOKS=(base udev autodetect keyboard keymap consolefont modconf block encrypt lvm2 filesystems fsck)/g' /etc/mkinitcpio.conf
 
