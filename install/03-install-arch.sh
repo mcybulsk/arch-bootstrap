@@ -2,10 +2,12 @@
 
 source utils/source-common.sh
 
+echo "Installing missing dependency"
+pacman -Sy pacman-contrib
 echo "Setting up the /etc/pacman.d/mirrorlist file"
 curl -s "https://www.archlinux.org/mirrorlist/?country=PL&country=DE&protocol=https&use_mirror_status=on" | sed -e 's/^#Server/Server/' -e '/^#/d' | rankmirrors -n 5 - > /etc/pacman.d/mirrorlist
 echo "Installing base system packages"
-pacstrap /mnt base base-devel grub git
+pacstrap /mnt base base-devel
 echo "Finished installing base system packages!"
 
 echo "Generating the /etc/fstab"
@@ -34,5 +36,10 @@ echo "::1 localhost" >> /etc/hosts
 echo "Recreating initramfs image"
 mkinitcpio -p linux
 
-echo "Finished installation. Please install boot loader"
+cp -r ../ /mnt/tmp/arch-bootstrap-master
+echo "Finished installation. Please continue installation after invoking these commands:"
+echo "---"
+echo "arch-chroot /mnt"
+echo "cd /tmp/arch-bootstrap-master/install"
+echo "---"
 
