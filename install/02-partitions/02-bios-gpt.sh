@@ -1,5 +1,7 @@
 #!/bin/sh
 
+source utils/source-commons.sh
+
 echo "Please choose the device to partition (all data will be lost)"
 lsblk
 echo -n "Device to be partitioned: "

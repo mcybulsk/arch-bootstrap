@@ -1,9 +1,6 @@
 #!/bin/sh
 
-set -o errexit
-set -o nounset
-set -o pipefail
-set -o xtrace
+source utils/source-common.sh
 
 # Verify internet connection
 if ! utils/is-internet-available.sh ; then
