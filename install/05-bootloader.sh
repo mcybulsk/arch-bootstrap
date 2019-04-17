@@ -19,10 +19,10 @@ if [ ! ${decision} = "y" ]; then
 fi
 
 echo "Installing grub on ${device}"
-grub-install --target=i386-pc #{device}
+grub-install --target=i386-pc ${device}
 
 # FIXME after GRUB installation do https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system#Configuring_the_boot_loader_2
-root_uuid=lsblk -o NAME,UUID | grep MyVolGroup-root | rev | cut -d' ' -f 1 | rev
+root_uuid=$(lsblk -o NAME,UUID | grep MyVolGroup-root | rev | cut -d' ' -f 1 | rev)
 echo "Found volume root UUID: ${root_uuid}"
 sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="cryptdevice=UUID='${root_uuid}':cryptlvm"'
 
