@@ -20,6 +20,7 @@ echo "127.0.0.1 localhost" >> /etc/hosts
 echo "::1 localhost" >> /etc/hosts
 
 echo "Recreating initramfs image"
+sed -i 's/^HOOKS=.*/HOOKS=(base udev autodetect keyboard keymap consolefont modconf block encrypt lvm2 filesystems fsck)/g' /etc/mkinitcpio.conf
 mkinitcpio -p linux
 
 echo "Finished installation. Please install boot loader"

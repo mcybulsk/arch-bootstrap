@@ -28,3 +28,8 @@ sed -i 's/GRUB_CMDLINE_LINUX_DEFAULT=.*/GRUB_CMDLINE_LINUX_DEFAULT="cryptdevice=
 
 echo "Generating the main grub configuration file"
 grub-mkconfig -o /boot/grub/grub.cfg
+echo "All finished! Just please setup the root password."
+passwd
+
+echo "All done, please restart: reboot now"
+
