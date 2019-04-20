@@ -16,20 +16,16 @@ if [ ! ${decision} = "y" ]; then
 fi
 
 echo "Creating a MBR table"
-parted -s ${device} mklabel mbr
+parted -s ${device} mklabel msdos
 echo "Creating a boot partition for MBR Grub: ${device}1"
 parted -s ${device} mkpart primary ext4 1MiB 3MiB
-parted -s ${device} name 1 grub
-parted -s ${device} set 1 bios_grub on
 echo "Creating a boot partition: ${device}2"
 parted -s ${device} mkpart primary ext4 3MiB 1GiB
-parted -s ${device} name 2 boot
-parted -s ${device} set 2 legacy_boot on
+parted -s ${device} set 2 boot on
 # Should probably be 'mkfs.fat -F32 ${device}2' on EFI
 mkfs.ext4 ${device}2
 echo "Creating an LVM container for LUKS: ${device}3"
-parted -s ${device} mkpart extended ext4 1GiB 100%
-parted -s ${device} name 3 data
+parted -s ${device} mkpart extended 1GiB 100%
 echo "Setting up logical volumes in LUKS container"
 cryptsetup luksFormat --type luks2 ${device}3
 cryptsetup open ${device}3 cryptlvm
