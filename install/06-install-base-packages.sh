@@ -8,8 +8,20 @@ pacman -Syu \
 	zsh \
 	sudo \
 	vim \
-	openssh 
+	openssh \
+	ufw
 
 # Enable DHCP service
 systemctl enable dhcpcd
+
+# Disable SSH password authentication
+echo "PasswordAuthentication no" >> /etc/ssh/sshd_config
+echo "PubkeyAuthentication yes" >> /etc/ssh/sshd_config
+systemctl enable sshd
+
+# Configure Uncomplicated Firewall
+ufw default deny
+ufw allow from 192.168.10.0/24
+ufw limit SSH
+ufw enable
 
