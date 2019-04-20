@@ -30,5 +30,3 @@ grub-mkconfig -o /boot/grub/grub.cfg
 echo "All finished! Just please setup the root password."
 passwd
 
-echo "All done, please restart: reboot now"
-

@@ -13,9 +13,8 @@ echo "Finished installing base system packages!"
 echo "Generating the /etc/fstab"
 genfstab -U /mnt >> /mnt/etc/fstab
 
-mkdir -p /root/arch-bootstrap-master
-cp -r ../../ /root/arch-bootstrap-master
-chmod -R 777 /mnt/tmp/arch-bootstrap-master
+mkdir -p /mnt/root/arch-bootstrap-master
+cp -r ../ /mnt/root/arch-bootstrap-master
 echo "Finished installation. Please continue installation after invoking these commands:"
 echo "---"
 echo "arch-chroot /mnt"
