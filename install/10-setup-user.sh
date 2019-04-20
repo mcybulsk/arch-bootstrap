@@ -17,6 +17,11 @@ sudo -u ${NEW_USER_NAME} sh -c 'ln -sf ~/arch-bootstrap/dotfiles/config/* .confi
 sudo -u ${NEW_USER_NAME} sh -c 'ln -sf ~/arch-bootstrap/dotfiles/home/.[^.]* .'
 sudo -u ${NEW_USER_NAME} sh -c 'ln -sf ~/arch-bootstrap/dotfiles/home/* .'
 
+echo "SSH setup"
+ssh-keygen -t rsa -b 4096
+echo "Importing SSH keys from GitHub"
+curl -o ~/.ssh/authorized_keys https://github.com/mcybulsk.keys
+
 popd
 
 echo "All finished, just please change the password for the new user"
