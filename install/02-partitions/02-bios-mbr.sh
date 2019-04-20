@@ -25,7 +25,8 @@ parted -s ${device} set 2 boot on
 # Should probably be 'mkfs.fat -F32 ${device}2' on EFI
 mkfs.ext4 ${device}2
 echo "Creating an LVM container for LUKS: ${device}3"
-parted -s ${device} mkpart extended 1GiB 100%
+parted -s ${device} mkpart primary ext4 1GiB 100%
+parted -s ${device} set 3 lvm on
 echo "Setting up logical volumes in LUKS container"
 cryptsetup luksFormat --type luks2 ${device}3
 cryptsetup open ${device}3 cryptlvm
