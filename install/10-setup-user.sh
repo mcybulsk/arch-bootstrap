@@ -11,5 +11,5 @@ echo "Adding to sudoers"
 echo "${NEW_USER_NAME}"' ALL=(ALL:ALL) ALL' | EDITOR='tee -a' visudo
 pushd /home/${NEW_USER_NAME}
 sudo -u ${NEW_USER_NAME} mkdir -p .config
-sudo -u ${NEW_USER_NAME} git clone git@github.com:mcybulsk/arch-bootstrap.git
+sudo -u ${NEW_USER_NAME} git clone https://github.com/mcybulsk/arch-bootstrap.git
 sudo -u ${NEW_USER_NAME} ln -s arch-bootstrap/dotfiles/config/* .config/
