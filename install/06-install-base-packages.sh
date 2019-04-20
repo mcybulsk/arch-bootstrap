@@ -6,7 +6,8 @@ pacman -Syu \
 	git \
 	dhcp \
 	zsh \
-	sudo
+	sudo \
+	vim
 
 # Enable DHCP service
 systemctl enable dhcpcd
