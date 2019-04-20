@@ -12,10 +12,10 @@ echo "${NEW_USER_NAME}"' ALL=(ALL:ALL) ALL' | EDITOR='tee -a' visudo
 pushd /home/${NEW_USER_NAME}
 sudo -u ${NEW_USER_NAME} mkdir -p .config
 sudo -u ${NEW_USER_NAME} git clone https://github.com/mcybulsk/arch-bootstrap.git
-sudo -u ${NEW_USER_NAME} sh -c 'ln -s ~/arch-bootstrap/dotfiles/config/* .config/'
-sudo -u ${NEW_USER_NAME} sh -c 'ln -s ~/arch-bootstrap/dotfiles/home/.[^.]* .'
-sudo -u ${NEW_USER_NAME} sh -c 'ln -s ~/arch-bootstrap/dotfiles/home/* .'
 sudo -u ${NEW_USER_NAME} sh -c 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"'
+sudo -u ${NEW_USER_NAME} sh -c 'ln -sf ~/arch-bootstrap/dotfiles/config/* .config/'
+sudo -u ${NEW_USER_NAME} sh -c 'ln -sf ~/arch-bootstrap/dotfiles/home/.[^.]* .'
+sudo -u ${NEW_USER_NAME} sh -c 'ln -sf ~/arch-bootstrap/dotfiles/home/* .'
 
 popd
 
