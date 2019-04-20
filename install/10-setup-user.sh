@@ -19,3 +19,6 @@ sudo -u ${NEW_USER_NAME} sh -c 'ln -sf ~/arch-bootstrap/dotfiles/home/* .'
 
 popd
 
+echo "All finished, just please change the password for the new user"
+passwd michal
+
