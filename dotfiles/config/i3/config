@@ -175,7 +175,7 @@ bar {
 bindsym $mod+Ctrl+l exec i3lock-fancy
 exec xautolock -time 5 -locker 'i3lock-fancy' &
 
-bindsym Print exec flameshot --full --path "~/Pictures/screenshots"
+bindsym Print exec flameshot full --path "${HOME}/Pictures/screenshots"
 bindsym $mod+Shift+Ctrl+e exit
 
 # Custom applications starting
