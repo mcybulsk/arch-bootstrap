@@ -22,3 +22,6 @@ install -dm0 ~/.dropbox-dist
 echo "Install signal and slack"
 yay -S signal-desktop-bin slack-desktop
 
+echo "Install i3lock-fancy"
+yay -S i3lock-fancy-git
+
