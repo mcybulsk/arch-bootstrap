@@ -13,5 +13,7 @@ echo "Installing i3 and other packages"
 pacman -S i3-wm i3blocks i3lock i3status \
 	rofi \
 	libnotify dunst \
-	python-pywal feh
+	python-pywal feh \
+	xdg-user-dirs
+systemctl enable xdg-user-dirs-update
 
