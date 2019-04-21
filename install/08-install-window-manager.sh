@@ -13,5 +13,5 @@ echo "Installing i3 and other packages"
 pacman -S i3-wm i3blocks i3lock i3status \
 	rofi \
 	libnotify dunst \
-	pywal feh
+	python-pywal feh
 

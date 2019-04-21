@@ -15,6 +15,7 @@ sudo pacman -S \
 	keepass
 
 echo "Install Dropbox"
+gpg --receive-keys FC918B335044912E
 yay -S dropbox
 rm -rf ~/.dropbox-dist
 install -dm0 ~/.dropbox-dist
