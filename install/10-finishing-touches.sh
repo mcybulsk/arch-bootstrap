@@ -12,3 +12,6 @@ locale-gen
 echo "LANG=en_US.UTF-8" > /etc/locale.conf
 echo "KEYMAP=pl" > /etc/vconsole.conf
 
+echo "Install the Hack font"
+pacman -S ttf-hack
+

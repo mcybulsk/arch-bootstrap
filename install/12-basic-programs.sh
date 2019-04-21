@@ -12,7 +12,8 @@ echo "Install a couple of base programs"
 sudo pacman -S \
 	firefox \
 	flameshot \
-	keepass
+	keepass \
+	ranger python-pillow
 
 echo "Install Dropbox"
 gpg --receive-keys FC918B335044912E
