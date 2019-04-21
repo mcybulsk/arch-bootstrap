@@ -180,6 +180,7 @@ bindsym $mod+Shift+Ctrl+e exit
 
 # Custom applications starting
 exec wal -i ~/Pictures/wallpapers
+exec nm-applet &
 
 # Set colors from Xresources
 # Change 'color7' and 'color2' to whatever colors you want i3 to use 

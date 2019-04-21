@@ -18,6 +18,7 @@ order += "wireless _first_"
 order += "ethernet _first_"
 order += "path_exists VPN"
 order += "load"
+order += "battery 0"
 order += "cpu_temperature 0"
 order += "tztime local"
 
@@ -43,6 +44,17 @@ tztime local {
 
 load {
         format = "load [%1min %5min %15min]"
+}
+battery 0 {
+  format                   = "%status %percentage %remaining"
+  integer_battery_capacity = true
+  last_full_capacity       = true
+  status_bat               = "🔋 BAT"
+  status_chr               = "⚡ CHR"
+  status_full              = "☻ FULL"
+  status_unk               = "??? UNK"
+  #low_treshold             = 35
+  path                     = /sys/class/power_supply/BAT%d/uevent
 }
 
 cpu_temperature 0 {
