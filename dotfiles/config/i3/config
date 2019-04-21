@@ -182,6 +182,7 @@ bindsym $mod+Shift+Ctrl+e exit
 exec wal -i ~/Pictures/wallpapers
 exec nm-applet &
 exec pasystray &
+exec dropbox &
 
 # Set colors from Xresources
 # Change 'color7' and 'color2' to whatever colors you want i3 to use 
