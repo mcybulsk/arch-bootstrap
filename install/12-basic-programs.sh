@@ -27,3 +27,5 @@ yay -S signal-desktop-bin slack-desktop
 echo "Install i3lock-fancy"
 yay -S i3lock-fancy-git
 
+echo "Install Polybar"
+yay -S polybar
