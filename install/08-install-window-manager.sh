@@ -6,9 +6,9 @@ echo "Installing xorg"
 pacman -S xorg
 
 echo "Installing LightDM"
-pacman -S lightdm
+pacman -S lightdm ligthdm-gkt-greeter
 systemctl enable lightdm
 
 echo "Installing i3 and other packages"
-pacman -S i3 rofi dunst
+pacman -S i3-wm i3blocks i3lock i3status rofi libnotify dunst
 
