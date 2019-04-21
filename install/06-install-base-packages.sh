@@ -9,7 +9,8 @@ pacman -Syu \
 	sudo \
 	vim \
 	openssh \
-	ufw
+	ufw \
+	python
 
 # Enable DHCP service
 systemctl enable dhcpcd
