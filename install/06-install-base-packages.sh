@@ -9,6 +9,7 @@ pacman -Syu \
 	sudo \
 	vim \
 	openssh \
+	openssh-askpass \
 	ufw \
 	python
 
