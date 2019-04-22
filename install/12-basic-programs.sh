@@ -12,7 +12,7 @@ echo "Install a couple of base programs"
 sudo pacman -S \
 	firefox \
 	flameshot \
-	keepass \
+	keepassxc \
 	ranger python-pillow
 
 echo "Install Dropbox"
