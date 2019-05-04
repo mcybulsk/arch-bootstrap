@@ -180,6 +180,8 @@ bindsym $mod+Shift+Ctrl+e exit
 
 # Custom applications starting
 exec wal -i ~/Pictures/wallpapers
+bindsym $mod+w exec wal -i ~/Pictures/wallpapers
+
 exec nm-applet &
 exec pasystray &
 exec dropbox &
