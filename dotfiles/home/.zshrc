@@ -104,3 +104,5 @@ if [ -f "${HOME}/env/gcloud/google-cloud-sdk/path.zsh.inc" ]; then . "${HOME}/en
 # The next line enables shell command completion for gcloud.
 if [ -f "${HOME}/env/gcloud/google-cloud-sdk/completion.zsh.inc" ]; then . "${HOME}/env/gcloud/google-cloud-sdk/completion.zsh.inc"; fi
 
+alias icat="kitty +kitten icat"
+
