@@ -64,10 +64,12 @@ cpu_temperature 0 {
 
 disk "/" {
         # format = "/ %avail"
-        format = "/ %free/%total"
+        #format = "/ %free/%total"
+        format = "/ %percentage_avail (%avail) left of %total"
 }
 
 disk "/home" {
-        format = "/home %free/%total"
+        #format = "/home %free/%total"
+        format = "/home %percentage_avail (%avail) left of %total"
 }
 

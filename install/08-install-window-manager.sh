@@ -15,6 +15,7 @@ pacman -S i3-wm i3blocks i3lock i3status \
 	libnotify dunst \
 	python-pywal feh \
 	xautolock \
-	xdg-user-dirs
+	xdg-user-dirs \
+	autorandr
 systemctl enable xdg-user-dirs-update
 
