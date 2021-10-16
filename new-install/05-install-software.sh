@@ -12,7 +12,9 @@ pacman -S \
 	openssh \
 	screen \
 	zip \
-	unzip
+	unzip \
+	htop \
+	brightnessctl
 
 # Power management
 pacman -S tlp
@@ -48,6 +50,7 @@ pacman -S \
 	swayidle \
 	swaylock \
 	swaybg \
+	waybar \
 	bemenu \
 	qt5-wayland \
 	qt6-wayland \
