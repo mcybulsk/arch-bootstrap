@@ -23,6 +23,7 @@ pacman -S alsa \
 	alsa-utils \
 	pulseaudio \
 	pulseaudio-alsa \
+	pamixer \
 	pavucontrol
 
 # Configure mirrors
@@ -48,6 +49,8 @@ pacman -S \
 	swaylock \
 	swaybg \
 	bemenu \
+	qt5-wayland \
+	qt6-wayland \
 	kanshi
 
 # Utilities

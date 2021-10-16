@@ -4,6 +4,7 @@ set -x
 HOSTNAME=mercury
 
 ln -sf /usr/share/zoneinfo/Europe/Warsaw /etc/localtime
+timedatectl set-ntp true
 hwclock --systohc
 sed -i 's/#en_US.UTF-8 UTF-8/en_US.UTF-8 UTF-8/' /etc/locale.gen
 locale-gen
