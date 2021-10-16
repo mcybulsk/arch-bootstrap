@@ -7,3 +7,5 @@ if [ ! "$SSH_AUTH_SOCK" ]; then
     eval "$(<~/.ssh-agent-thing)"
 fi
 
+export XKB_DEFAULT_LAYOUT=pl
+
