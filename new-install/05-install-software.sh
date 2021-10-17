@@ -54,6 +54,8 @@ pacman -S \
 	bemenu \
 	qt5-wayland \
 	qt6-wayland \
+	qt5ct \
+	xorg-xwayland \
 	kanshi
 
 # Utilities

@@ -253,3 +253,6 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86Search exec bemenu-run
 
+# Uncomment for a 'clean' Wayland session
+# xwayland disable
+
