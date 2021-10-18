@@ -8,6 +8,7 @@ if [ ! "$SSH_AUTH_SOCK" ]; then
 fi
 
 export XKB_DEFAULT_LAYOUT=pl
+export XDG_CONFIG_HOME="${HOME}/.config"
 
 # For compability with XWayland (running soft in Wayland mode when X is also available). Source: https://wiki.archlinux.org/title/Wayland#GUI_libraries
 export GDK_BACKEND=wayland
