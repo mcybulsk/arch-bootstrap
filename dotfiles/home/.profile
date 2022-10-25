@@ -21,3 +21,7 @@ export SDL_VIDEODRIVER=wayland
 # export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=on'
 export _JAVA_AWT_WM_NONREPARENTING=1
 
+# Dart & Flutter
+export ANDROID_SDK_ROOT="${HOME}/env/android/cmdline-tools/latest"
+export ANDROID_SDK_HOME="${ANDROID_SDK_ROOT}"
+export PATH="${HOME}/env/flutter/bin:${ANDROID_SDK_ROOT}/bin:${PATH}"

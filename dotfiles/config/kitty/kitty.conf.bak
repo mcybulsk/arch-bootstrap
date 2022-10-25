@@ -23,6 +23,6 @@ sync_to_monitor no
 
 
 # BEGIN_KITTY_THEME
-# Forest Night
+# Afterglow
 include current-theme.conf
 # END_KITTY_THEME

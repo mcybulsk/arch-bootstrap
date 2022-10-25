@@ -66,6 +66,7 @@ input type:touchpad {
     dwt disabled
     tap disabled
     click_method clickfinger
+    scroll_factor 0.25
 }
 
 ### Key bindings
@@ -238,6 +239,9 @@ include @sysconfdir@/sway/config.d/*
 
 # autorandr for Wayland
 exec kanshi
+
+exec dropbox
+
 
 # Custom keys
 bindsym XF86AudioRaiseVolume exec pactl set-sink-volume PCM +5%
