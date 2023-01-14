@@ -13,7 +13,7 @@ profile {
 }
 
 profile {
-	output eDP-1 enable mode 2560x1600@60.029 position 450,1440 scale 1.5
-	output "Goldstar Company Ltd LG HDR 4K 204NTYT7N066" mode 3840x2160@59.997 position 0,0 scale 1.5
+	output eDP-1 enable mode 2560x1600@165.040 position 450,1440 scale 1.5
+	output "LG Electronics LG HDR 4K 204NTYT7N066" mode 3840x2160@60 position 0,0 scale 1.5
 }
 
