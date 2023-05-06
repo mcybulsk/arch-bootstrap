@@ -25,3 +25,12 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 export ANDROID_SDK_ROOT="${HOME}/env/android/cmdline-tools/latest"
 export ANDROID_SDK_HOME="${ANDROID_SDK_ROOT}"
 export PATH="${HOME}/env/flutter/bin:${ANDROID_SDK_ROOT}/bin:${PATH}"
+
+# flyctl
+export FLYCTL_INSTALL="/home/michal/.fly"
+export PATH="$FLYCTL_INSTALL/bin:$PATH"
+
+export CHROME_EXECUTABLE=google-chrome-stable
+
+# Set keyboard backlight to white
+asusctl led-mode static -c ffffff
